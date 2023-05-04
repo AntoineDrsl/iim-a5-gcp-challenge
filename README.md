@@ -1,5 +1,10 @@
 # iim-a5-gcp-challenge
 
+## Préparation de l'application
+
+- Accéder au dossier src: ```cd src```
+- Installer les dépendances: ```npm install```
+
 ## Lancement de l'application
 
 - Accéder au dossier terraform: ```cd terraform```
