@@ -26,3 +26,6 @@ module "google-cloud-function" {
 module "big-query" {
   source = "./modules/big-query"
 }
+module "monitoring-dashboard" {
+  source = "./modules/monitoring-dashboard"
+}
