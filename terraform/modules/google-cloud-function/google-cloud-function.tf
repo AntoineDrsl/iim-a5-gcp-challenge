@@ -13,7 +13,7 @@ data "archive_file" "source" {
 
 # Bucket to store function code
 resource "google_storage_bucket" "iim-bucket-dev-002" {
-  name     = "iim-bucket-dev-002"
+  name     = "${var.project_id}-iim-bucket-dev-002"
   location = "${var.region}"
   force_destroy = true
   uniform_bucket_level_access = true
@@ -53,4 +53,22 @@ resource "google_cloudfunctions_function_iam_member" "invoker" {
 
   role   = "roles/cloudfunctions.invoker"
   member = "allUsers"
+}
+
+# Enable Cloud Functions API
+resource "google_project_service" "cloud-functions" {
+  project = var.project_id
+  service = "cloudfunctions.googleapis.com"
+
+  disable_dependent_services = true
+  disable_on_destroy         = false
+}
+
+# Enable Cloud Build API
+resource "google_project_service" "cloud-build" {
+  project = var.project_id
+  service = "cloudbuild.googleapis.com"
+
+  disable_dependent_services = true
+  disable_on_destroy         = false
 }

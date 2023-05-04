@@ -1,6 +1,6 @@
 # Storage bucket for backend
 resource "google_storage_bucket" "iim-bucket-dev-001" {
-  name     = "iim-bucket-dev-001"
+  name     = "${var.project_id}-iim-bucket-dev-001"
   location = "${var.region}"
   force_destroy = true
   uniform_bucket_level_access = true

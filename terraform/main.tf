@@ -19,13 +19,29 @@ provider "google" {
 
 module "storage" {
   source = "./modules/storage"
+
+  project_id="${var.project_id}"
+  region="${var.region}"
+  zone="${var.zone}"
 }
 module "google-cloud-function" {
   source = "./modules/google-cloud-function"
+
+  project_id="${var.project_id}"
+  region="${var.region}"
+  zone="${var.zone}"
 }
 module "big-query" {
   source = "./modules/big-query"
+
+  project_id="${var.project_id}"
+  region="${var.region}"
+  zone="${var.zone}"
 }
 module "monitoring-dashboard" {
   source = "./modules/monitoring-dashboard"
+
+  project_id="${var.project_id}"
+  region="${var.region}"
+  zone="${var.zone}"
 }
