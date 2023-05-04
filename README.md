@@ -29,3 +29,6 @@
 - Commenter le bloc *backend* dans *main.tf*
 - Réinitialiser terraform: ```terraform init -migrate-state```
 - Supprimer les éléments: ```terraform destroy```
+
+## Auteur
+Antoine Durussel
