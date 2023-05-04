@@ -6,8 +6,8 @@ terraform {
   }
 
   # backend "gcs" {
-  #     bucket  = "iim-bucket-dev-001"
-  #     prefix  = "terraform/state"
+  #   bucket  = "iim-stbucket-dev-001"
+  #   prefix  = "terraform/state"
   # }
 }
 provider "google" {

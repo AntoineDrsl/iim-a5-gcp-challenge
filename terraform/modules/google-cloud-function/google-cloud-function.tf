@@ -13,7 +13,7 @@ data "archive_file" "source" {
 
 # Bucket to store function code
 resource "google_storage_bucket" "iim-bucket-dev-002" {
-  name     = "${var.project_id}-iim-bucket-dev-002"
+  name     = "iim-stbucket-dev-002"
   location = "${var.region}"
   force_destroy = true
   uniform_bucket_level_access = true
